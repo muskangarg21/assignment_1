@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+               Browser-Modifiable Adaptable Window
+        </title>
+    </head>
+    <body>
+          <input type="text" id="url">
+          <button onclick="f1()">GO!</button>
+          <iframe id="frame" src=""></iframe>
+    <script>
+            function myFunc() {
+                var x = document.getElementById("url").value;
+                return x; 
+            }     
+           function f1(){     
+            document.getElementById("frame").src = "http://"+ myFunc();
+              }
+</script>
+      </body>
+</html>

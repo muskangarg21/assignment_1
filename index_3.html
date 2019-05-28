@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+                modifiable adaptable window
+        </title>
+    </head>
+    <body>
+        <select id="url">
+            <option value="www.wikipedia.org/"> www.wikipedia.org/</option>
+            <option value="shipyourenemiesglitter.com">shipyourenemiesglitter.com</option>
+            <option value=" nooooooooooooooo.com"> nooooooooooooooo.com</option>
+            <option value="cat-bounce.com">cat-bounce.com</option>
+          </select> 
+          <button onclick="f1()">Try it</button>
+          <iframe id="frame" src=""></iframe>
+    <script>
+            function myFunc() {
+                var x = document.getElementById("url");
+                var y = x.options[x.selectedIndex].value;
+                return y; 
+            }     
+           function f1(){     
+            document.getElementById("frame").src = "http://"+ myFunc();
+              }
+</script>
+      </body>
+</html>

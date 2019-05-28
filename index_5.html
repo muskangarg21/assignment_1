@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>
+               Browser-Modifiable Adaptable Window
+        </title>
+    </head>
+    <body>
+        type url here <input type="text" id="url"> <br>
+         width <input type="text" id="wid"> <br>
+          height <input type="text" id="hei"> <br>
+          <button onclick="f1()">GO!</button>
+          <iframe id="frame" src="" width="" height=""></iframe>
+
+    <script>
+            function myFunc() {
+                var x = document.getElementById("url").value;
+                return x; 
+            }     
+            function myFuncw() {
+                var x = document.getElementById("wid").value;
+                return x; 
+            }     
+            function myFunch() {
+                var x = document.getElementById("hei").value;
+                return x; 
+            }     
+           function f1(){     
+            document.getElementById("frame").src = "http://"+ myFunc();
+            document.getElementById("frame").width =  myFuncw();
+            document.getElementById("frame").height = myFunch();
+              }
+</script>
+      </body>
+</html>
